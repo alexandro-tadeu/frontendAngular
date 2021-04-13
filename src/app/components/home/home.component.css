@@ -1,0 +1,33 @@
+#DivCard {
+    position: relative;
+    border-width: 2px;
+    width: 100px;
+    height: 100px;
+    left: 0px;
+    float: left;
+}
+
+#DivLateral {
+    position: relative;
+    padding-left: 5%;
+    border-width: 2px;
+    width: 100px;
+    height: 100px;
+    left: 0px;
+    float: left;
+}
+
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+.group {
+    zoom: 1;
+    /* For IE 6/7 (trigger hasLayout) */
+}
