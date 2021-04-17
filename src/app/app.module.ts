@@ -24,15 +24,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+<<<<<<< HEAD
 import { CadastrarClienteComponent } from './components/clientes/cadastrar-cliente/cadastrar-cliente.component';
 import { AtualizarClienteComponent } from './components/clientes/atualizar-cliente/atualizar-cliente.component';
 import { ListarClientesComponent } from './components/clientes/listar-clientes/listar-clientes.component';
+=======
+
+>>>>>>> 1f3f77f9d2e384d36672b94c67596a2f997eb4ba
 
 registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
     AppComponent,
+<<<<<<< HEAD
     HomeComponent,
     HeaderComponent,
     FooterComponent,
@@ -44,6 +49,14 @@ registerLocaleData(localePt);
     AtualizarClienteComponent,
     ListarClientesComponent
 
+=======
+    ListarProdutosComponent,
+    CadastratarProdutoComponent,
+    HomeComponent,
+    HeaderComponent,
+    FooterComponent,
+    AtualizarProdutoComponent,
+>>>>>>> 1f3f77f9d2e384d36672b94c67596a2f997eb4ba
   ],
   imports: [
     BrowserModule,
