@@ -1,0 +1,42 @@
+<h1 class="my-3 text-primary">
+    Listar Clientes
+    <button type="button" routerLink="/clientes/cadastrar" class="btn btn-success mt-2 float-right">
+  Cadastrar
+</button>
+</h1>
+
+<div class="card shadow">
+    <table class="table table-responsive table-stripe">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Data Nascimento</th>
+                <th>Sexo</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cli of listaClientes">
+                <td>{{ cli.id }}</td>
+                <td>{{ cli.nome }}</td>
+                <td>{{ cli.dataNasc | date: "shortDate" }}</td>
+                <td>{{ cli.sexo | currency: "BRL" }}</td>
+                <td>
+                    <button class="btn btn-warning" routerLink="/clientes/atualizar/{{ cli.id }}">
+          <i class="fa fa-pencil" aria-hidden="true"></i>
+        </button>
+                    <button class="btn btn-danger ml-2" [swal]="{
+                    title:'ATENÇÃO!!!',
+                    text:'Deseja realmente escluir o cliuto: '+ cli.nome +'?',
+                    showDenyButton: true,
+                    denyButton: 'Não',
+                    confirmButtonText:'Sim, excluir', icon: 'warning'
+                  }" (confirm)="deletar(cli)">
+          <i class="fa fa-trash-o" aria-hidden="true"></i>
+        </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

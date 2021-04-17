@@ -1,0 +1,43 @@
+<h1 class="my-3 text-primary">Cadastrar cliente</h1>
+
+<div class="card shadow">
+    <form class="m-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="nome">Nome do cliente</label>
+                    <input type="text" class="form-control" placeholder="Digite o nome do cliente" name="nomecliente" [(ngModel)]="cliente.nome" />
+                </div>
+            </div>
+        </div>
+        <!-- fim row nome-->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="validade">Data Nascimento do cliente</label>
+                    <input type="date" class="form-control" name="dataNasc" [(ngModel)]="cliente.dataNasc" />
+                </div>
+            </div>
+        </div>
+        <!-- fim row validade-->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="preco">Sexo do cliente</label>
+                    <input type="text" class="form-control" placeholder="Digite o sexo do cliente" name="sexo" [(ngModel)]="cliente.sexo" />
+                </div>
+            </div>
+        </div>
+        <!-- fim row preco-->
+
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-default" routerLink="/clientes">Voltar</button>
+                <button class="btn btn-success float-right" (click)="salvarCliente()">
+          Salvar
+        </button>
+            </div>
+        </div>
+    </form>
+
+</div>
